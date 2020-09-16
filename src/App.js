@@ -29,6 +29,8 @@ class App extends Component {
     let todolengh = this.state.todos.length; //นับไอดี
     let newMassage = {}
     console.log(todolengh)
+    console.log(this.state.message)
+    if(this.state.message != ""){
     if(todolengh == 0){
       newMassage =  {id: todolengh ,name: this.state.message,complete :false};
     //  console.log(todolengh)
@@ -40,6 +42,9 @@ class App extends Component {
     }
     oldTodo.push(newMassage);
     this.setState({todos : oldTodo});
+  }else{
+    alert("error")
+  }
   }
 
   render() {
